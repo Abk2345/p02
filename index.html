@@ -1,0 +1,1241 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Pied Piper</title>
+<link rel="shortcut icon" type="image/jpg" href="logo.jpg">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+  #home{
+    background-image:repeating-linear-gradient(to right,greenyellow,green,yellowgreen,teal);
+    width:100%;
+    height:100vh;
+  }
+  #surprise{
+    background-image:repeating-linear-gradient(to right,green,yellowgreen,teal);
+    width:100%;
+  }
+  #launchingsoon{
+    background-image:repeating-linear-gradient(to right,greenyellow,yellowgreen,teal);
+    width:100%;
+    height:120vh;
+  }
+  #reviews{
+    background-image:repeating-linear-gradient(to right,greenyellow,green,yellowgreen);
+    width:100%;
+  }
+  #addrev{
+    background-image:repeating-linear-gradient(to right,greenyellow,green,yellowgreen,white);
+    width:100%;
+  }
+  #mostsold{
+    background-image:repeating-linear-gradient(to right,greenyellow,blue,yellowgreen,black);
+    width:100%;
+  }
+
+  /*for every page*/
+  .nav1{
+     border-bottom: 1px solid gray;
+     text-align: center;
+     line-height: 55px;
+     max-height: 100%;
+   }
+   body{
+     width: 100%;
+     height:100%;
+     margin: 0;
+   }
+   .l{
+    font-size: 26px;
+    margin:0 40px 0 0;
+    line-height: 55px;
+    display:none;
+    width:28px;
+    float:right;
+  } 
+  .topnav {  
+    overflow: hidden;
+    background-color:black;
+    top: 0 ;
+    left: 0 ;
+    width: 100%; 
+    border-radius: 5px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    position: fixed !important;
+    z-index: 1000;  
+  }
+    .topnav a {
+    float: left;
+    color:white;
+    text-align: center;
+    padding: 10px 20px;
+    text-decoration: none;
+    line-height: 30px;
+    font-size: 20px;
+    margin-top: 5px !important;
+  }
+  ul {
+    list-style-type: none;
+    margin-top: -5px;
+  } 
+  li a {
+    display: inline-block; 
+  }
+  .topnav a:hover {
+    background-color:brown;
+    color: black;
+    border:3px solid green;
+    border-radius: 5%;
+    transition-duration: 0.25s;
+    border-radius: 5px;
+    transform: scale(1.00,1.05);
+  } 
+  .topnav a.active {
+    background-color: #4CAF50;
+    color:palegoldenrod;
+    border: 4px solid brown;
+    border-radius: 5px;
+  }  
+  .logo{
+      float: left;
+      height: 50px;
+      max-width: 70px;
+      border: chartreuse;
+      border-radius: 3px;
+      margin-left: 15px;
+      margin-right: 45px;
+      margin-top: 3px;
+      margin-bottom: 5px;
+      box-shadow: 0 5px 10px yellowgreen;
+  } 
+  
+ #toggle{
+   display: none;
+ }
+ span{
+   color:yellow;
+ }
+ /*home*/
+#ho-h1{
+  color: black;
+  font-size: 75px;
+  margin-left: auto;
+  text-align: center;
+  margin-right: auto;
+  text-shadow: 5px 5px red;
+}
+#ho-h1:hover{
+  color:white;
+  transform:scale(1.05,1.05);
+  transition-duration: 100ms;
+}
+#ho-h2{
+  color: blue;
+  font-size: 50px;
+  margin-left: auto;
+  text-align: center;
+  margin-right: auto;
+  text-shadow: 2px 3px black;
+}
+#ho-h2:hover{
+  color:white;
+  transform:scale(1.05,1.05);
+  transition-duration: 100ms;
+}
+#ho-img img{
+  height:270px;
+  width:300px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  box-shadow: 4px 4px 5px black;
+  border-radius: 10%;
+  margin-top: 25px;
+}
+#ho-img img:hover{
+  transform:scale(1.05,1.05);
+  transition-duration: 100ms;
+}
+#ho-btn{
+  width:200px;
+  font-size:25px;
+  display:block;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: black;
+  margin-top: 100px;
+  color:white;
+
+}
+/*surprise css*/
+#su-h1{
+  color: black;
+  font-size: 65px;
+  margin-left: auto;
+  text-align: center;
+  margin-right: auto;
+  text-shadow: 2px 3px blue;
+}
+#su-h1:hover{
+  color:white;
+  transform:scale(1.05,1.05);
+  transition-duration: 100ms;
+}
+.container1{
+     max-width: 92%;
+     margin-left: 3%;
+     position: relative;
+     justify-content: space-between;
+   }
+   .container1 .card1 .face{
+     width: 320px;
+     height: 300px;
+     transition: 0.5s; 
+   }
+   .container1 .card1 .face.face1{
+     position: relative;
+     background-image: url('back.jpg');
+     display: flex; 
+     justify-content: center;
+     align-items: center;
+     z-index: 1;
+     transform: translateY(100px);
+   }
+   .container1 .card1:hover .face.face1{
+    transform: translateY(0px);
+    background-image: url('back.jpg');
+   }
+   .container1 .card1 .face.face1 .content1{
+     opacity: 0.5;
+     transition: 0.5s;
+   }
+   .container1 .card1 .face.face1 .content1 img{
+     max-width: 250px;
+     padding: 0;
+     color: black;
+     text-align: center;
+     font-size: 1.5em;
+   }
+   .container1 .card1 .face.face1 .content1 h3{
+     margin: 10px 0 0;
+   }
+   .container1 .card1:hover .face.face1 .content1{
+     opacity: 1;
+   }
+   .container1 .card1 .face.face2
+   {
+     position: relative;
+     background-image: url('back1.jpg');
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     padding: 20px;
+     box-sizing: border-box;
+     box-shadow: o 20px 40px rgba(0,0,0,0.8);
+    transform: translateY(-200px);
+   }
+   .container1 .card1:hover .face.face2{
+    transform: translateY(0px);
+   }
+   .container1 .card1 .face.face2 .content1 p{
+     margin: 0;
+     padding: 0;
+   }
+   .container1 .card1 .face.face2 .content1 a{
+     margin: 15px 0 0;
+     display: inline-block;
+     text-decoration: none;
+     font-weight: 900;
+     color: #333333;
+     padding: 5px;
+     border: 1px solid black;
+   }
+   .container1 .card1 .face.face2 .content1 a:hover{
+     background-color: blanchedalmond;
+     color:black;
+   }
+  #su-btn{
+    font-weight: 600;
+    font-size: 22px;
+    color:white;
+    box-shadow: yellowgreen;
+    background-color: black;
+    position: relative;
+  }
+  #su-h3{
+    color:white !important;
+    text-align: center !important;
+  }
+  #su-h4{
+    color:white !important;
+  }
+  #su-p{
+    font-size: 20px;
+  }
+
+/*most sold items style*/
+#ms-h1{
+  color: green;
+  font-size: 65px;
+  margin-left: auto;
+  text-align: center;
+  margin-right: auto;
+  text-shadow: 2px 3px black;
+}
+#ms-h1:hover{
+  color:white;
+  transform:scale(1.05,1.05);
+  transition-duration: 100ms;
+}
+.heading {
+    font-size: 25px;
+    margin-right: 25px;
+  }
+.card img{   
+    border-radius: 50% !important;
+}
+#ms-img{
+  width:300px;
+  height: 300px;
+  box-shadow: 2px 3px 5px black;
+}
+#ms-img:hover{
+  transform: scale(1.05,1.05);
+  transition-duration: 200ms;
+}
+ul {
+ font-size: 20px;
+  margin-top: 0px;
+}
+ .fa {
+    font-size: 25px;
+  }
+  .checked:before {
+    color: orangered;
+  }
+ .column {
+      float: left;
+      width: 25%;
+      height: 650px;
+      padding: 0 10px;
+    }
+    .row {margin: 0 -5px;}
+    .row:after {
+      content: "";
+      display: table;
+      clear: both;
+    }  
+    .card {
+      box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 1);
+      padding: 16px;
+      text-align: center;
+      background-color: #f1f1f1;
+      height: 600px;
+      
+    }
+    p{
+    font-size: 30px;
+    font-family:  verdana;
+    text-shadow: 0 2px 10px rgb(50, 240, 12);
+    color: black;
+    text-align: center;
+    margin-top: 20px;
+    }
+   p:hover{transform: scale(1.05,1.05);
+      transition-duration: 0.25s;
+    }
+/*launching soon style*/
+  #ls-p{
+  font-size: 40px;
+  font-family:  verdana;
+  text-shadow: 2px 0 10px black;
+  color: white;
+  text-align: center;
+  margin-top: 30px;
+    }
+  #ls-p:hover{transform: scale(1.05,1.05);
+    transition-duration: 0.25s;
+    }
+#ls-h1{
+  font-size: 60px;
+  font-family:  verdana;
+  text-shadow: 3px 3px 10px red;
+  color: black;
+  text-align: center;
+  margin-top: 30px;
+    }
+#ls-h1:hover{transform: scale(1.05,1.05);
+    transition-duration: 0.25s;
+    color:white;
+    }
+#ls-h2{
+  font-size: 42px;
+  font-family:  verdana;
+  color: black;
+  text-align: center;
+  margin-top: 30px;
+    }
+#ls-h2:hover{transform: scale(1.05,1.05);
+    transition-duration: 0.25s;
+    }
+ul {
+  font-size: 20px;
+   margin-top: 0px;
+ }
+.column {
+    float: left;
+    width: 25%;
+    height: 700px;
+    padding: 0 10px;
+  }
+.row {margin: 0 -5px;}
+
+
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+  }  
+
+ .card {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 1);
+    padding: 16px;
+    text-align: center;
+    height: 700px;
+    background-color: #f1f1f1;
+  }
+  #ls-img{
+  width:300px;
+  height: 300px;
+  box-shadow: 2px 3px 5px black;
+}
+ #ls-img:hover{
+  transform: scale(1.05,1.05);
+  transition-duration: 200ms;
+} 
+/*review style*/
+#r-img{
+  width:180px;
+  height: 180px;
+  box-shadow: 2px 3px 5px black;
+}
+#r-h3{
+  font-size: 35px;
+  font-family:  verdana;
+  color: black;
+  text-align: center;
+  margin-top: 30px;
+    }
+#r-h3:hover{transform: scale(1.05,1.05);
+    transition-duration: 0.25s;
+    color:white;
+    }
+ #r-h4{
+  font-size: 25px;
+  font-family:  verdana;
+  color: black;
+  text-align: center;
+  margin-top: 30px;
+    }
+#r-h4:hover{transform: scale(1.05,1.05);
+    transition-duration: 0.25s;
+    color:white;
+    }
+
+.w3-container{
+    width: 90% !important;
+    margin-left: 5% !important;
+}
+ul {
+    font-size: 20px;
+     margin-top: 0px;
+   }
+   #r-h1{
+  font-size: 60px;
+  font-family:  verdana;
+  text-shadow: 3px 3px 10px red;
+  color: white;
+  text-align: center;
+  margin-top: 30px;
+    }
+#r-h1:hover{transform: scale(1.05,1.05);
+    transition-duration: 0.25s;
+    color:black;
+    }
+#r-h2{
+  font-size: 45px;
+  font-family:  verdana;
+  text-shadow: 3px 3px 10px red;
+  color: blue;
+  font-weight: bold;
+  text-align: center;
+  margin-top: 30px;
+    }
+#r-h2:hover{transform: scale(1.05,1.05);
+    transition-duration: 0.25s;
+    color:white;
+    }
+#r-p{
+  font-size: 25px;
+  font-family:  verdana;
+  text-shadow: 3px 3px 10px red;
+  color: black;
+  text-align: center;
+  margin-top: -70px;
+    }
+
+.w3-panel.w3-card{
+    height: 200px !important;
+    background-color: lightcoral;
+}
+.image{
+    float: left;
+    width: 120px !important;
+    height: 120px !important;
+    margin-top: 5px;  
+}
+.imagdes{
+    position: relative;
+    text-align: center;
+    color:blue;
+    visibility: hidden;
+    opacity: 0;
+    font-size: 20px;
+    text-shadow: 0 0 10px red;
+}
+.image:hover .imagdes{
+    visibility: visible;
+    opacity: 1;   
+}
+.des{
+    text-align: center;
+}
+#r-h3{
+    font-size: 30px !important;
+}
+/*adding review css*/
+
+.fromContainer{
+    background-color: white;   
+    height: 500px;
+    width: 80%;
+    margin: 5% 0 0 10% ;
+    margin-bottom: 5%;
+    border-radius: 15px;
+    position: relative;
+    margin-top:2%;
+}
+.from{
+    margin: 5%;
+  
+    height: 420px;
+}
+.lable{
+    display: inline-block !important;
+    max-width: 100% !important;
+    margin-bottom: 5px !important;
+    font-size: 20px !important;
+    font-family: monospace !important;
+    margin-left: 20px !important;
+    margin-top:5px !important;
+ }
+.inputfields{
+    background: lightgray;
+    height: 35px;
+    margin-left: 18px;
+    width: 70%;
+    border: none;
+    border-radius: 11px;
+    padding-left: 10px;
+ }
+.inputfields1{
+    background: lightgray;
+    height: 100px;
+    margin-left: 18px;
+    width: 70%;
+    border: none;
+    border-radius: 11px;
+    padding-left: 10px;
+ }
+  .container {
+    display: block;
+    position: relative;
+    padding-left: 35px;
+    margin-bottom: 12px;
+    cursor: pointer;
+    font-size: 16px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    font-family: monospace;
+    font-weight: 400;
+    margin-left: 21px;
+    margin-top: 4px;
+  }
+  
+  /* Hide the browser's default checkbox */
+  .container input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+  }
+
+  #ar-btn{
+    border: none;
+    width: 85px;
+    color: ghostwhite;
+    background-color: brown;;
+    height: 40px;
+    border-radius: 9px;
+    margin-left: 20px;
+    margin-top: 20px;
+    font-size: 20px;
+  }
+
+  #ar-btn:hover{
+      background: chartreuse;
+  }
+
+  #ar-h1{
+      font-size: 60px !important;
+      color: white ;
+      margin-top: 40px !important;
+      text-align: center;
+      text-shadow: 3px 3px black;
+  }
+  #ar-h1:hover{
+    transform:scale(1.05,1.05);
+    transition-duration: 100ms;
+    color:black;
+    text-shadow: 3px 3px white;
+  }
+
+  #ar-h2{
+      font-size: 40px !important;
+      color:black !important;
+      margin-top: 20px !important;
+      text-align:center;
+      text-shadow: 1.5px 2px white;
+  }
+  #ar-img{
+    height:350px;
+    width:350px;
+    border: 2px solid black;
+  }
+ /*footer style*/
+#f-h1{
+    color:white !important;
+    font-size: 60px !important;
+    margin-bottom: 200px !important;
+}
+#f-img{
+    margin-top: 10px;
+    margin-left: 100px;
+    height: 100px !important;
+    width: 100px !important;
+}
+.k{
+    color: white;
+    margin-left: 100px;
+     margin-top: -50px;
+}
+.p{
+    color: white;
+   margin-top: 50px;
+   margin-left: 100px;
+}
+
+.container2{
+   width:100%;
+   margin-bottom: 5px;
+}
+/*top-navigation*/
+#t-nav{
+position:fixed;
+z-index:1000;
+right:5%;
+bottom:5%;
+border: 15px solid red;
+border-radius: 50%;
+}
+</style>
+</head>
+<body>
+<section id="home">
+<div class="nav">
+  <img src="logo.jpg" alt="pied piper" class="logo">
+  <label class="l" for="toggle">&#9776</label>
+  <input type="checkbox" id="toggle"/>
+
+<div class="topnav" style="background-image: url('logo1.png');" >
+  <ul>
+ <li><img src="logo.jpg" alt="pied piper" class="logo"></li>
+  <li><a class="active" href="#home">Home</a></li>
+  <li><a href="#surprise">Surprise!!</a></li>
+  <li><a href="#mostsold">Most sold items</a></li>
+  <li><a href="#launchingsoon">Items Launching soon</a></li>
+  <li> <a href="#reviews">Reviews</a></li>
+  <li><a href="#addrev">Make review</a></li>   <!--Adding review-->
+  <li><a href="https://www.google.com/covid19/" TARGET="_blank"><span>Prevent CORONA</span></a></li>
+  </ul>
+</div>
+</div>
+<div style="max-width: 100%;height: auto;">
+   <h1 id="ho-h1"><b> Pied Piper</b></h1>
+   <h2 id="ho-h2"><q><b>Here is what you need to have</b></q></h2>
+</div>
+<div id="ho-img">
+    <img src="logo.jpg">
+</div>
+<div>
+    <button id="ho-btn" type="button"><a href="#surprise">surprise </a></button>
+</div>
+</section>
+<div>
+ <a href="#home"><button></button><i id="t-nav" class="fa fa-arrow-circle-up" style="font-size:48px;color:black"></i></button></a>
+</div>
+
+
+ <!--surprise-->
+<section id="surprise">
+<div>
+    <h1 id="su-h1"><b>here is surprises for you...</b></h1>
+  <div class="container1">
+   <div class="row">
+      <div class="col col--12xs col-sm-6 col-lg-3 col-xl-3">
+      <div class="card1">
+          <div class="face face1">
+              <div class="content1">
+                  <img src="camera.webp">
+                  <h3 id="su-h3">Flat 13% off<br/> 0n DSLR camera</h3> 
+              </div>
+          </div>
+          <div class="face face2">
+              <div class="content1" >
+                  <h4 id="su-h4"><strike>Rs.54000/-</strike><br/> Now Only on Rs.46980/-</h4>
+                  <button type="button" id="su-btn">
+                      <details>
+                      <summary>Read more</summary>
+                        <p id="su-p">-This article is about the use and knowledge of techniques and processes for producing goods and services. For other uses, see Technology (disambiguation).</p>
+                      </details>
+                      </button>
+              </div>
+          </div>
+        </div>
+      </div>
+      <div class="col col-xs-12 col-sm-6 col-lg-3 col-xl-3">
+      <div class="card1">
+          <div class="face face1">
+              <div class="content1">
+                  <img src="cam.webp">
+                  <h3 id="su-h3">Flat 20% off on<b> Blackberry </b><br/> Smart Watch<h3>
+              </div>
+
+          </div>
+          <div class="face face2">
+              <div class="content1">
+                  <h4 id="su-h4"><strike>Rs.3000/-</strike><br/> Now Only on Rs.2400/-</h4>
+                  <button type="button" id="su-btn">
+                      <details>
+                          <summary>Read more</summary>
+                         <p id="su-p">-This article is about the use and knowledge of techniques and processes for producing goods and services. For other uses, see Technology (disambiguation).</p>
+                      </details>
+                  </button>
+              </div>
+
+          </div>
+      </div>
+      </div>
+
+   <div class="col col-xs-12 col-sm-6 col-lg-3 col-xl-3">
+      <div class="card1">
+          <div class="face face1">
+              <div class="content1">
+                  <img src="lapapple.jfif">
+                  <h3 id="su-h3">Flat 10% off on<br/> Macbook pro <h3>
+              </div>
+
+          </div>
+          <div class="face face2">
+              <div class="content1">
+                  <h4 id="su-h4"><strike>Rs.1,30,000/-</strike><br/> Now Only on Rs.1,17,000/-</h4>
+                  <button type="button" id="su-btn">
+                      <details>
+                          <summary>Read more</summary>
+                  <p id="su-p">-This article is about the use and knowledge of techniques and processes for producing goods and services. For other uses, see Technology (disambiguation).</p>
+                      </details>
+                  </button>
+              </div>
+
+          </div>
+      </div>
+   </div>
+   <div class="col col-xs-12 col-sm-6 col-lg-3 col-xl-3">
+      <div class="card1">
+          <div class="face face1">
+              <div class="content1">
+                  <img src="mi1.jfif">
+                  <h3 id="su-h3">Flat 15% off on<br/><b> mi note 8 pro</b><h3></h3>
+                  
+              </div>
+
+          </div>
+          <div class="face face2">
+              <div class="content1">
+                  <h4 id="su-h4"><strike>Rs.21,000/-</strike><br/> Now Only on Rs.17,850/-</h4>
+                  <button type="button" id="su-btn">
+                      <details>
+                          <summary>Read more</summary>
+                 
+                  <p id="su-p">-This article is about the use and knowledge of techniques and processes for producing goods and services. For other uses, see Technology (disambiguation).</p>
+                   </details>
+                   </button>
+              </div>
+</div>
+          </div>
+    </div>
+ </section>
+ <!--most sold-->
+ <section id="mostsold">
+ <div><h1 id="ms-h1"><b>Most sold items</b></h1></div>
+  <div style="max-width: 100%;height:auto">
+     <div class="row">
+       <div class="column">
+         <div class="card" style="background-image: url('back1.jpg');">
+            <img id="ms-img" src="mb2.jpg" >
+            <p>Inferno Pro </p>
+            <span class="heading">User Rating<span><br/>
+            <span class="fa fa-star checked"></span>
+             <span class="fa fa-star checked"></span>
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star"></span><br/>
+             <span class="heading">  4.1 (254)</span>   
+         </div>  
+       </div>
+
+       <div class="column">
+         <div class="card" style="background-image: url('back1.jpg');">
+          
+            <img id="ms-img" src="mtrack2.jpeg">
+       
+            <p>Mapmyindia Mtrack vechile tracker</p>
+            <span class="heading">User Rating<span><br/>
+                <span class="fa fa-star checked"></span>
+                 <span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span><br/>
+               <span class="heading">  4.9 (399)</span>
+            
+         </div> 
+       </div>
+        <div class="column">
+          <div class="card" style="background-image: url('back1.jpg');">
+            <img id="ms-img" src="bl.jfif">
+            <p>BeatO sugar testing machine</p>
+            <span class="heading">User Rating<span><br/>
+                <span class="fa fa-star checked"></span>
+                 <span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star"></span><br/>
+                 <span class="heading">  3.9 (432)</span>
+          </div>
+        </div>
+        <div class="column">
+            <div class="card" style="background-image: url('back1.jpg');">
+              <img id="ms-img" src="google.jpeg">
+              <p>Google chromeset 3</p>
+              <span class="heading">User Rating<span><br/>
+                <span class="fa fa-star checked"></span>
+                 <span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star"></span><br/>
+                 <span class="heading">  4.19 (341)</span> 
+            </div>
+          </div>
+   
+      
+      </div> 
+       
+      
+      <div class="row">
+       
+        
+        <div class="column">
+ 
+          <div class="card" style="background-image: url('back1.jpg');">
+             <img id="ms-img" src="smart.jpeg" >
+
+            <p>CloudWalker smart TV stick</p>
+            <span class="heading">User Rating<span><br/>
+                <span class="fa fa-star checked"></span>
+                 <span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span><br/>
+                 <span class="heading">  5.0 (114)</span>
+          </div> 
+         
+        </div>
+ 
+        <div class="column">
+          <div class="card" style="background-image: url('back1.jpg');">
+             <img id="ms-img" src="kep.webp">
+            <p>kepaver Back cover</p>
+            <span class="heading">User Rating<span><br/>
+                <span class="fa fa-star checked"></span>
+                 <span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star"></span><br/>
+                 <span class="heading">  4.0 (223)</span>
+          </div> 
+        </div>
+        <div class="column">
+            <div class="card" style="background-image: url('back1.jpg');">
+              <img id="ms-img" src="in.webp">
+              <p>Infix hot 8</p>
+              <span class="heading">User Rating<span><br/>
+                <span class="fa fa-star checked"></span>
+                 <span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star"></span><br/>
+                 <span class="heading">  4.2 (294)</span>
+            </div>
+          </div>
+          <div class="column">
+              <div class="card" style="background-image: url('back1.jpg');">
+                <img id="ms-img" src="asus.jpeg">
+                <p>Asus Zenbook Duo</p>
+                <span class="heading">User Rating<span><br/>
+                    <span class="fa fa-star checked"></span>
+                     <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span><br/>
+                     <span class="heading">  4.9 (314)</span>
+              </div>
+            </div>
+       
+      </div>
+      
+
+           <div class="row">
+         
+        
+        
+            <div class="column">
+     
+              <div class="card" style="background-image: url('back1.jpg');">
+                 <img id="ms-img" src="lenovo.jpeg" >
+                 <p>Lenovo Tab 4</p>
+                 <span class="heading">User Rating<span><br/>
+                    <span class="fa fa-star checked"></span>
+                     <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star"></span><br/>
+                     <span class="heading">  4.0 (724)</span>
+              </div> 
+             
+            </div>
+
+            
+            <div class="column">
+                <div class="card" style="background-image: url('back1.jpg');">
+                   <img id="ms-img" src="sony.jpg">
+                   <p>SONY-WI-XB400</p>
+                   <span class="heading">User Rating<span><br/>
+                    <span class="fa fa-star checked"></span>
+                     <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star"></span><br/>
+                     <span class="heading">  3.9 (524)</span>                   
+                </div> 
+               </div>      
+             </div>
+           </div>
+         </div>
+       </div>    
+</div>
+ </section>
+ <section id="launchingsoon">
+  <div><h1 id="ls-h1"><b>Launching soon...</b></h1></div>
+  <div style="max-width: 100%;height:auto">
+       <div class="row">
+         <div class="column">
+           <div class="card" style="background-image: url('back1.jpg');">
+              <img id="ls-img" src="lapapple.jfif" >
+              <h2 id="ls-h2"><b>New macbook pro</b></h2>
+              <p id="ls-p"> Buy here latest macbook earliest in the market</p>
+           </div> 
+         </div>
+  
+         <div class="column">
+           <div class="card" style="background-image: url('back1.jpg');">
+              <img  id="ls-img" src="camera.webp">
+              <h2 id="ls-h2"><b>New DSLR camera</b></h2>
+              <p id="ls-p">  Earliest available on our online store</p>
+           </div> 
+         </div>
+          <div class="column">
+            <div class="card" style="background-image: url('back1.jpg');">
+              <img  id="ls-img" src="iphone1.jfif">
+              <h2 id="ls-h2"><b>New iphone SE2</b></h2>
+              <p id="ls-p"> Buy here the most beautiful phone of the year</p>
+            </div>
+          </div>
+          <div class="column">
+              <div class="card" style="background-image: url('back1.jpg');">
+                <img  id="ls-img" src="cam.webp">
+                <h2 id="ls-h2"><b>New MW smart watch</b></h2>
+                <p id="ls-p"> Buy most fashionable smart watch here</p>
+              </div>
+            </div>
+        </div>       
+ </section>
+
+ <section id="reviews">
+  <div class="w3-container">
+    <h1 id="r-h1"><b>People's Reviews</b></h1>
+    <h2 id="r-h2">Here is what people says about <b>Pied Piper</b></h2>
+  
+    <div class="w3-panel w3-card">
+      <div class="image">
+            <img id="r-img" src="john.png">
+           <div class="imagdes">
+             <p id="r-p">John Weisel</p>
+           </div>
+      </div>
+      <div class="des">
+    <h3 id="r-h3"><b>Terrific Purchase</b></h3>
+    <h4 id="r-h4">  This platform is awesome.<br/>
+   </h4>
+    </div>
+        
+    </div>
+    <div class="w3-panel w3-card">
+      <div class="image">
+        <img id="r-img" src="john.png">
+        <div class="imagdes">
+          <p id="r-p">Viraj Madke</p>
+        </div>
+  </div>
+  <div class="des">
+    <h3 id="r-h3"><b>Just wow!!</b></h3>
+    <h4 id="r-h4">  
+    Wonderful customer facilities.</h4>
+    </div>
+    </div>
+    
+    <div class="w3-panel w3-card">
+      <div class="image">
+      <img id="r-img" src="john.png">
+      <div class="imagdes">
+        <p id="r-p">Aaryan Durgam</p>
+      </div>
+  </div>
+  <div class="des">
+    <h3 id="r-h3"><b>Superb!</b></h3>
+    <h4 id="r-h4"> 
+    Especially for tech products.</h4>
+    </div>
+  </div>
+    <div class="w3-panel w3-card">
+      <div class="image">
+        <img id="r-img" src="john.png">
+        <div class="imagdes">
+          <p id="r-p">Arpit Das</p>
+        </div>
+  </div>
+  <div class="des">
+    <h3 id="r-h3"><b>Gorgeous</b></h3>
+    <h4 id="r-h4">  
+    Experience it once.</h4>
+    </div>
+    </div>
+    <div class="w3-panel w3-card">
+      <div class="image">
+        <img id="r-img" src="john.png">
+        <div class="imagdes">
+          <p id="r-p">Pankaj Jagade</p>
+        </div>
+  </div>
+  <div class="des">
+    <h3 id="r-h3"><b>Great product</b></h3>
+    <h4 id="r-h4"> 
+    it provides great product.</h4>
+    </div>
+    </div>
+    <div class="w3-panel w3-card">
+      <div class="image">
+        <img id="r-img" src="john.png">
+        <div class="imagdes">
+          <p id="r-p">Dileep Maloth</p>
+        </div>
+      </div>
+      <div class="des">
+        <h3><b>Fabulous</b></h3>
+        <h4 id="r-h4"> 
+  very good quality of product.</h4>
+        </div>
+    
+    </div>
+    <div class="w3-panel w3-card">
+      <div class="image">
+        <img id="r-img" src="john.png">
+        <div class="imagdes">
+          <p id="r-p">Naman Goel</p>
+        </div>
+      </div>
+      <div class="des">
+        <h3 id="r-h3"><b>Fabulous</b></h3>
+        <h4 id="r-h4"> 
+  very good quality of product.</h4>
+        </div>
+    
+    </div>
+    <div class="w3-panel w3-card">
+      <div class="image">
+        <img id="r-img" src="john.png">
+        <div class="imagdes">
+          <p id="r-p">Rahul Rawat</p>
+        </div>
+      </div>
+      <div class="des">
+        <h3 id="r-h3"><b>Fabulous</b></h3>
+        <h4 id="r-h4"> 
+  very good quality of product.</h4>
+        </div>
+    
+    </div>
+    <div class="w3-panel w3-card">
+      <div class="image">
+        <img id="r-img" src="john.png">
+        <div class="imagdes">
+          <p id="r-p">Nitesh Gudhenia</p>
+        </div>
+      </div>
+      <div class="des">
+        <h3 id="r-h3"><b>Fabulous</b></h3>
+        <h4 id="r-h4"> 
+  very good quality of product.</h4>
+        </div>
+    
+    </div>
+    <div class="w3-panel w3-card">
+      <div class="image">
+        <img id="r-img" src="john.png">
+        <div class="imagdes">
+          <p id="r-p">Bipin Gupta</p>
+        </div>
+      </div>
+      <div class="des">
+        <h3 id="r-h3"><b>Fabulous</b></h3>
+        <h4 id="r-h4"> 
+  very good quality of product.</h4>
+        </div>
+    
+    </div>
+  </div>
+
+ </section>
+ <section id="addrev">
+  <h1 id="ar-h1"><b>Add your review</b></h1><br/>
+  <h2 id="ar-h2"><b><u>over the purchase</u></b></h2>
+  <div class="fromContainer" style="background-image: url('back1.jpg');">
+
+    
+
+      <div class="from">
+        <h2 id="ar-h2">Make your review here</h2>
+
+        <div class="row">
+            <div class="col col-xs-12 col-sm-12 col-lg-6 col-xl-6">
+                <img id="ar-img" src="john.png">
+            </div>
+            <div class="col col-xs-12 col-sm-12 col-lg-6 col-xl-6">
+              <label  class="lable">First Name</label><br/>
+              <input class="inputfields" type="text" id="fName" placeholder="Enter first Name" />
+              
+              </div>
+            
+          <div class="col col-xs-12 col-sm-12 col-lg-6 col-xl-6">
+            <label  class="lable">Last Name</label><br/>
+            <input class="inputfields" type="text" id="lName" placeholder="Enter Last Name" />
+            
+           </div>
+        <div class="col col-xs-12 col-sm-12 col-lg-6 col-xl-6">
+          <label  class="lable">Review</label><br/>
+          <input class="inputfields1" type="text" id="lName" placeholder="Make your review" />
+          
+         </div>
+      <div class="col col-xs-12 col-sm-12 col-lg-6 col-xl-6">
+          <button id="ar-btn" type="button" class="btn">Submit</button>
+        </div>
+
+ </section>
+ <!--footer section-->
+ <div class="container2" style="background-image: url('bg.jfif');">
+    
+  <div class="row">
+    <div class="col col-xs-12 col-sm-6 col-lg-4 col-xl-3" >
+        <div class="image">
+        <img id="f-img" src="logo.jpg">
+        </div>
+        <h4 class="k"><b>Pied Piper</b><h4>
+        <a class="k" href="#">@copyright2020,LLC</a>
+    </div>    
+    <div class="col col-xs-12 col-sm-6 col-lg-4 col-xl-3" >
+        <h4 class="p"><b><u>Our policies:-</u></b></h4>
+        <a class="p" href="#"><b>terms and conditions</b></a><br/>
+        <a class="p" href="#"><b>privacy policy</b></a>
+   </div>
+   <div class="col col-xs-12 col-sm-6 col-lg-4 col-xl-3" >
+    <h4 class="p"><b><u>contacts:-</u></b></h4>
+    <a class="p" href="#"><b>Facebook</b></a>
+        <a class="p" href="#"><b>Twitter</b></a><br/>
+        <a class="p" href="#"><b>Instagram</b></a>
+        <a class="p" href="#"><b>Whatsapp</b></a>
+  </div>
+</div>
+</div>
+ <script src="https://static.codepen.io/assets/common/stopExecutionOnTimeout-9bf952ccbbd13c245169a0a1190323a27ce073a3d304b8c0fdf421ab22794a58.js"></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+<script >
+$(document).ready(function(){
+  // Add smooth scrolling to all links
+  $("a").on('click', function(event) {
+
+    // Make sure this.hash has a value before overriding default behavior
+    if (this.hash !== "") {
+      // Prevent default anchor click behavior
+      event.preventDefault();
+
+      // Store hash
+      var hash = this.hash;
+
+      // Using jQuery's animate() method to add smooth page scroll
+      // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
+      $('html, body').animate({
+        scrollTop: $(hash).offset().top-60
+      }, 800, function(){
+   
+        // Add hash (#) to URL when done scrolling (default click behavior)
+      });
+    } // End if
+  });
+});
+</script>
+</body>
+</html>
